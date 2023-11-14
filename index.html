@@ -15,13 +15,16 @@
 <script>
 function generate() {
  if(document.getElementById("symbolInput").value == "+") {
-  document.getELementById("line1").innerHTML = document.getElementById("number1Input").value + "+" + document.getElementById("number2Input").value + "=" + eval(document.getElementById("number1Input").value + " + " + document.getElementById("number2Input").value)
-  document.getELementById("line2").innerHTML = document.getElementById("number2Input").value + "+" + document.getElementById("number1Input").value + "=" + eval(document.getElementById("number2Input").value + " + " + document.getElementById("number1Input").value)
-  document.getELementById("line3").innerHTML = eval(document.getElementById("number1Input").value + " + " + document.getElementById("number2Input").value) + "-" + document.getElementById("number1Input").value + "=" + eval(eval(document.getElementById("number1Input").value + " + " + document.getElementById("number2Input").value) + " - " + document.getElementById("number1Input").value)
-  document.getELementById("line4").innerHTML = eval(document.getElementById("number1Input").value + " + " + document.getElementById("number2Input").value) + "-" + document.getElementById("number2Input").value + "=" + eval(eval(document.getElementById("number1Input").value + " + " + document.getElementById("number2Input").value) + " - " + document.getElementById("number2Input").value)
+  document.getElementById("line1").innerHTML = document.getElementById("number1Input").value + "+" + document.getElementById("number2Input").value + "=" + eval(document.getElementById("number1Input").value + " + " + document.getElementById("number2Input").value)
+  document.getElementById("line2").innerHTML = document.getElementById("number2Input").value + "+" + document.getElementById("number1Input").value + "=" + eval(document.getElementById("number2Input").value + " + " + document.getElementById("number1Input").value)
+  document.getElementById("line3").innerHTML = eval(document.getElementById("number1Input").value + " + " + document.getElementById("number2Input").value) + "-" + document.getElementById("number1Input").value + "=" + eval(eval(document.getElementById("number1Input").value + " + " + document.getElementById("number2Input").value) + " - " + document.getElementById("number1Input").value)
+  document.getElementById("line4").innerHTML = eval(document.getElementById("number1Input").value + " + " + document.getElementById("number2Input").value) + "-" + document.getElementById("number2Input").value + "=" + eval(eval(document.getElementById("number1Input").value + " + " + document.getElementById("number2Input").value) + " - " + document.getElementById("number2Input").value)
  }
  if(document.getElementById("symbolInput").value == "-") {
-  
+  document.getElementById("line1").innerHTML = document.getElementById("number1Input").value + "-" + document.getElementById("number2Input").value + "=" + eval(document.getElementById("number1Input").value + " - " + document.getElementById("number2Input").value)
+  document.getElementById("line2").innerHTML = document.getElementById("number1Input").value + "-" + eval(document.getElementById("number1Input").value + " - " + document.getElementById("number2Input").value) + "=" + eval(document.getElementById("number1Input").value + " - " + eval(document.getElementById("number1Input").value + " - " + document.getElementById("number2Input").value))
+  document.getElementById("line3").innerHTML = eval(document.getElementById("number1Input").value + " - " + document.getElementById("number2Input").value) + "+" + document.getElementById("number2Input").value + "=" + eval(eval(document.getElementById("number1Input").value + " - " + document.getElementById("number2Input").value) + " + " + document.getElementById("number2Input").value)
+  document.getElementById("line4").innerHTML = document.getElementById("number2Input").value + "+" + eval(document.getElementById("number1Input").value + " - " + document.getElementById("number2Input").value) + "=" + eval(document.getElementById("number2Input").value + " + " + eval(document.getElementById("number1Input").value + " - " + document.getElementById("number2Input").value))
  }
 }
 </script>
