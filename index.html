@@ -33,7 +33,7 @@ function generate() {
  if(document.getElementById("symbolInput").value == "*") {
   var highnum = eval(document.getElementById("number1Input").value + " * " + document.getElementById("number2Input").value)
   document.getElementById("line1").innerHTML = document.getElementById("number1Input").value + "·" + document.getElementById("number2Input").value + "=" + highnum
-  document.getElementById("line2").innerHTML = document.getElementById("number1Input").value + "·" + document.getElementById("number2Input").value + "=" + highnum
+  document.getElementById("line2").innerHTML = document.getElementById("number2Input").value + "·" + document.getElementById("number1Input").value + "=" + highnum
   document.getElementById("line3").innerHTML = highnum + ":" + document.getElementById("number1Input").value + "=" + document.getElementById("number2Input").value
   document.getElementById("line4").innerHTML = highnum + ":" + document.getElementById("number2Input").value + "=" + document.getElementById("number1Input").value
  }
