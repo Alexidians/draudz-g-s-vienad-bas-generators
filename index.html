@@ -6,6 +6,8 @@
 <p><input id="number1Input" type="number"></input> <select id="symbolInput">
 <option value="-">-</option>
 <option value="+">+</option>
+<option value="*">·</option>
+ <option value="/">:</option>
 </select> <input id="number2Input" type="number"></input></p>
 <p><button onclick="generate()">Generate</button></p>
 <div id="result">
@@ -27,6 +29,20 @@ function generate() {
   document.getElementById("line2").innerHTML = document.getElementById("number1Input").value + "-" + eval(document.getElementById("number1Input").value + " - " + document.getElementById("number2Input").value) + "=" + eval(document.getElementById("number1Input").value + " - " + eval(document.getElementById("number1Input").value + " - " + document.getElementById("number2Input").value))
   document.getElementById("line3").innerHTML = eval(document.getElementById("number1Input").value + " - " + document.getElementById("number2Input").value) + "+" + document.getElementById("number2Input").value + "=" + eval(eval(document.getElementById("number1Input").value + " - " + document.getElementById("number2Input").value) + " + " + document.getElementById("number2Input").value)
   document.getElementById("line4").innerHTML = document.getElementById("number2Input").value + "+" + eval(document.getElementById("number1Input").value + " - " + document.getElementById("number2Input").value) + "=" + eval(document.getElementById("number2Input").value + " + " + eval(document.getElementById("number1Input").value + " - " + document.getElementById("number2Input").value))
+ }
+ if(document.getElementById("symbolInput").value == "*") {
+  var highnum = eval(document.getElementById("number1Input").value + " * " + document.getElementById("number2Input").value)
+  document.getElementById("line1").innerHTML = document.getElementById("number1Input").value + "·" + document.getElementById("number2Input").value + "=" + highnum
+  document.getElementById("line2").innerHTML = document.getElementById("number1Input").value + "·" + document.getElementById("number2Input").value + "=" + highnum
+  document.getElementById("line3").innerHTML = highnum + ":" + document.getElementById("number1Input").value + "=" + document.getElementById("number2Input").value
+  document.getElementById("line4").innerHTML = highnum + ":" + document.getElementById("number2Input").value + "=" + document.getElementById("number1Input").value
+ }
+ if(document.getElementById("symbolInput").value == "/") {
+  var othernum = eval(document.getElementById("number1Input").value + "/" + document.getElementById("number2Input").value)
+  document.getElementById("line1").innerHTML = document.getElementById("number1Input").value + ":" + document.getElementById("number2Input").value + "=" +  othernum
+  document.getElementById("line2").innerHTML = document.getElementById("number1Input").value + ":" + othernum + "=" + document.getElementById("number2Input").value
+  document.getElementById("line3").innerHTML = document.getElementById("number2Input").value + "·" + othernum + "=" + document.getElementById("number1Input").value
+  document.getElementById("line4").innerHTML = othernum + "·" + document.getElementById("number2Input").value + "=" + document.getElementById("number1Input").value
  }
 }
 </script>
